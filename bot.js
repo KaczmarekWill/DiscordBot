@@ -17,6 +17,11 @@ bot.login(auth.token);
 bot.on('ready', function (evt) {
 	logger.info('Connected');
 });
+bot.on("guildMemberAdd", member => {
+    const channel = member.guild.channels.find(ch => ch.name === 'general');
+    if (!channel) return;
+    channel.send(`Welcome ${member.user} to our Artificial Intelligence club!  You have taken the first step but not your last into the world of AI and our family. Your mission, should you choose to accept it, is to follow these next instructions:\n1)  Take some time and get familiar with Discord if you are not already\n2) Get comfortable with our club goals in the club-goals channel\n3) Go to the general chat and don't be shy, remember you are family now\n4) If you plan on getting involved and participating in projects post your n# in the server request channel\n5) Pick a project you find interesting in the VOID PROJECT (IDEAS) { } category\n6) Post in that projects channel and start getting involved\n7) Never give up!\n\nStephen Hawking once said, "AI is likely to be either the best or worst thing to happen to humanity," so lets make it the best.\n\nType !help to see a list of bot commands.`);
+  });
 bot.on("message", function (message) {
 	//Bot listens to all messages to check for profanity
 	if (filter == 1) {

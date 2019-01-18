@@ -8,6 +8,7 @@
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
     "discord.js": "^11.4.2",
     "forever": "^0.15.3",
+    "rmp-api": "0.0.1-security",
     "upstart": "0.0.2",
     "winston": "^3.1.0",
     "xmlhttprequest": "^1.8.0"
